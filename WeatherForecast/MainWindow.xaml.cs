@@ -19,6 +19,11 @@ namespace WeatherForecast
         // Метод, активирующийся при нажатии на кнопку
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+            Error.Text = null;
+            Temperature.Text = null;
+            Wind.Text = null;
+            Description.Text = null;
+
             string city = City.Text;
             string url = $"https://api.openweathermap.org/data/2.5/weather?q={city}&lang=ru&appid=ffc05b61c96f4a360f8244f609f2ad83";
 
